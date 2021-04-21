@@ -1,0 +1,22 @@
+{
+  "name": "impress",
+  "version": "1.0.0",
+  "description": "Image compression app",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yusuphiqbal/impress.git"
+  },
+  "author": "Yusuph Iqbal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yusuphiqbal/impress/issues"
+  },
+  "homepage": "https://github.com/yusuphiqbal/impress#readme",
+  "devDependencies": {
+    "electron": "^12.0.5"
+  }
+}
