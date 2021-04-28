@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'"
+    />
+    <meta
+      http-equiv="X-Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'"
+    />
+    <link rel="stylesheet" href="./index.css" />
+    <title>Impress</title>
+  </head>
+  <body>
+    <h1 class="app-name">Impress</h1>
+    <p class="app-description">Image compressor</p>
+    <div class="quality">50%</div>
+    <span class="quality-label">Drag the slider to adjust image quality</span>
+    <div class="slider">
+      <span class="slider-label slider-label--left">0%</span>
+      <input
+        type="range"
+        id="quality"
+        min="0"
+        max="100"
+        class="slider-input"
+        value="52"
+      />
+      <span class="slider-label slider-label--right">100%</span>
+    </div>
+    <div class="image">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+      >
+        <circle cx="7.499" cy="9.5" r="1.5"></circle>
+        <path
+          d="M10.499 14L8.999 12 5.999 16 8.999 16 11.999 16 17.999 16 13.499 10z"
+        ></path>
+        <path
+          d="M19.999,4h-16c-1.103,0-2,0.897-2,2v12c0,1.103,0.897,2,2,2h16c1.103,0,2-0.897,2-2V6C21.999,4.897,21.102,4,19.999,4z M3.999,18V6h16l0.002,12H3.999z"
+        ></path>
+      </svg>
+      <span class="path" id="image-path">No image selected</span>
+    </div>
+    <div class="output-folder">
+      <div class="output-label">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M20,5h-8.586L9.707,3.293C9.52,3.105,9.265,3,9,3H4C2.897,3,2,3.897,2,5v14c0,1.103,0.897,2,2,2h16c1.103,0,2-0.897,2-2V7 C22,5.897,21.103,5,20,5z M4,19V7h7h1h8l0.002,12H4z"
+          ></path>
+        </svg>
+        <span class="path" id="output-path"></span>
+      </div>
+      <a href="#" id="output-change">Change output folder</a>
+    </div>
+    <button type="button" id="select-btn">Select an Image</button>
+    <button type="button" id="compress-btn">Compress & Save</button>
+    <script src="./renderer.js"></script>
+  </body>
+</html>
